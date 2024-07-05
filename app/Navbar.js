@@ -2,29 +2,23 @@ const { default: Link } = require("next/link");
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-0 w-full px-8 py-4 shadow-sm bg-gray-50 flex items-center justify-between">
+    <nav className="fixed z-10 top-0 w-full px-8 py-4 shadow-sm bg-gray-50 flex items-center justify-between">
       <Link href="/" className="font-semibold">
         software company
       </Link>
-      <div className="flex items-center justify-between text-sm gap-4 ">
-        <Link href="/about" className="hover:text-orange-500 transition-all">
-          About
-        </Link>
-        <Link href="/products" className="hover:text-orange-500 transition-all">
+      <div className="hidden  md:flex items-center justify-between text-sm gap-4 ">
+        <Link href="/products" className="hover:text-teal-500 transition-all">
           Products
         </Link>
-        <Link
-          href="/portfolio"
-          className="hover:text-orange-500 transition-all"
-        >
+        <Link href="/portfolio" className="hover:text-teal-500 transition-all">
           Portfolio
         </Link>
         <Link
           href="/contact"
-          className="px-4 py-2 border-2 border-orange-200 hover:border-orange-400  flex items-center justify-start  hover:rounded-2xl bg-orange-500/10 hover:bg-orange-500/10 rounded-md transition-all"
+          className="px-4 py-2 border-2 border-teal-300 hover:border-teal-400  flex items-center justify-start  hover:rounded-2xl bg-teal-500/10 hover:bg-teal-500/10 rounded-md transition-all"
         >
           <svg
-            className="w-5 h-5 text-orange-500 mr-1  "
+            className="w-5 h-5 text-teal-500 mr-1  "
             aria-hidden="true"
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -37,6 +31,22 @@ const Navbar = () => {
           Call us
         </Link>
       </div>
+      <svg
+        className="w-6 h-6 text-black md:hidden"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        fill="none"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke="currentColor"
+          strokeLinecap="round"
+          strokeWidth="2"
+          d="M5 7h14M5 12h14M5 17h14"
+        />
+      </svg>
     </nav>
   );
 };

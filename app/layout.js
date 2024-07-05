@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="poppins">
         <Navbar />
-        <div className="px-8 md:px-28 2xl:px-64 ">{children}</div>
+        <div className="px-8 md:px-32 2xl:px-64">{children}</div>
         <Footer />
       </body>
     </html>
