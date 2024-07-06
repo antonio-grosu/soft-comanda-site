@@ -14,7 +14,7 @@ const Hero = () => {
       {/* div cu heading si cta */}
       <div className="flex flex-col gap-16 md:w-1/2">
         <div className="flex flex-col gap-8">
-          <h1 className="text-2xl mb-12 md:mb-0 font-semibold">
+          <h1 className="text-4xl mb-12 md:mb-0 font-semibold">
             Soluții pe Măsura Nevoilor Tale
           </h1>
           <p className="text-sm md:block hidden">
