@@ -6,12 +6,11 @@ const Footer = () => {
       <div className="flex flex-col md:w-3/12">
         <h3 className="font-semibold ">software company</h3>
         <p className="text-sm mt-4 text-black/50">
-          Get your custom software from a wise and experienced team of
-          developers
+          Software personalizat de la o echipă experimentată.
         </p>
       </div>
       <div className="flex flex-col mt-8 md:items-center gap-2">
-        <h3 className="font-semibold">Find Us Online</h3>
+        <h3 className="font-semibold">Rețele Sociale</h3>
         <Link href="/" className="text-sm hover:text-teal-500 transition-all ">
           Linkedin
         </Link>
@@ -23,19 +22,19 @@ const Footer = () => {
         </Link>
       </div>
       <div className="flex flex-col mt-8 md:items-center  gap-2">
-        <h3 className="font-semibold">Our Work</h3>
+        <h3 className="font-semibold">Proiectele noastre</h3>
         <Link href="/" className="text-sm hover:text-teal-500 transition-all ">
-          Web Design Projects
+          Web Design
         </Link>
         <Link href="/" className="text-sm hover:text-teal-500 transition-all ">
-          Successful Web Applications
+          Aplicații Web de succces
         </Link>
         <Link href="/" className="text-sm hover:text-teal-500 transition-all ">
-          Distinguished Mobile Apps
+          Aplicații de Management eficiente
         </Link>
       </div>
       <div className="flex flex-col mt-8 md:items-center gap-2">
-        <h3 className="font-semibold">For Collaborations</h3>
+        <h3 className="font-semibold">Pentru colaborări</h3>
         <Link href="/" className="text-sm hover:text-teal-500 transition-all ">
           contact@softwarecompany.com
         </Link>
