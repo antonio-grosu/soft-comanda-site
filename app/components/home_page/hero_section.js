@@ -17,7 +17,7 @@ const Hero = () => {
           <h1 className="text-4xl mb-12 md:mb-0 font-semibold">
             Soluții pe Măsura Nevoilor Tale
           </h1>
-          <p className="text-sm md:block hidden">
+          <p className="md:block hidden">
             Lasă-ne pe noi să ne ocupăm de tehnologie, ca tu să te concentrezi
             pe creșterea afacerii tale!
           </p>

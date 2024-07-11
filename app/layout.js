@@ -4,8 +4,8 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 
 export const metadata = {
-  title: "Software Company",
-  description: "Get your own software today!",
+  title: "Blooming Solutions",
+  description: "Software la comandă pentru afaceri cu viziuni mărețe",
 };
 
 export default function RootLayout({ children }) {

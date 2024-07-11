@@ -6,10 +6,10 @@ const Footer = () => {
       <div className="flex flex-col md:w-3/12">
         <h3 className="font-semibold ">software company</h3>
         <p className="text-sm mt-4 text-black/50">
-          Software personalizat de la o echipă experimentată.
+          Software personalizat creat de o echipă experimentată.
         </p>
       </div>
-      <div className="flex flex-col mt-8 md:items-center gap-2">
+      <div className="flex flex-col md:mt-0 mt-8 md:items-center gap-2">
         <h3 className="font-semibold">Rețele Sociale</h3>
         <Link href="/" className="text-sm hover:text-teal-500 transition-all ">
           Linkedin
@@ -21,7 +21,7 @@ const Footer = () => {
           Instagram
         </Link>
       </div>
-      <div className="flex flex-col mt-8 md:items-center  gap-2">
+      {/* <div className="flex flex-col md:mt-0 mt-8 md:items-center  gap-2">
         <h3 className="font-semibold">Proiectele noastre</h3>
         <Link href="/" className="text-sm hover:text-teal-500 transition-all ">
           Web Design
@@ -32,8 +32,8 @@ const Footer = () => {
         <Link href="/" className="text-sm hover:text-teal-500 transition-all ">
           Aplicații de Management eficiente
         </Link>
-      </div>
-      <div className="flex flex-col mt-8 md:items-center gap-2">
+      </div> */}
+      <div className="flex flex-col md:mt-0 mt-8 md:items-center gap-2">
         <h3 className="font-semibold">Pentru colaborări</h3>
         <Link href="/" className="text-sm hover:text-teal-500 transition-all ">
           contact@softwarecompany.com
