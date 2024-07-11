@@ -1,4 +1,6 @@
 // fiecare produs
+import Image from "next/image";
+
 const Products = () => {
   return (
     <div className="py-24">
