@@ -10,21 +10,39 @@ const Products = () => {
 
       {/* lista produse  */}
       <div className="flex flex-col md:gap-24 gap-16">
-        <Produs_Componenta nume="Website Prezentare" descriere="Descriere" />
-        <Produs_Componenta nume="Aplicatie Web" descriere="Descriere" />
-        <Produs_Componenta nume="Aplicatie Mobila" descriere="Descriere" />
         <Produs_Componenta
-          nume="Aplicatie Windows / Mac"
-          descriere="Descriere"
+          nume="Website Prezentare / CV Online"
+          descriere_1="Cui Oferim?"
+          descriere_2="Ce Oferim?"
         />
-        <Produs_Componenta nume="Software Management" descriere="Descriere" />
+        <Produs_Componenta
+          nume="Website tip Configurator"
+          descriere_1="Cui Oferim?"
+          descriere_2="Ce Oferim?"
+        />
+        <Produs_Componenta
+          nume="Ecommerce"
+          descriere="Descriere"
+          descriere_1="Cui Oferim?"
+          descriere_2="Ce Oferim?"
+        />
+        <Produs_Componenta
+          nume="Automatizarea serviciilor de Management & Gestiune"
+          descriere_1="Cui Oferim?"
+          descriere_2="Ce Oferim?"
+        />
+        <Produs_Componenta
+          nume="Automatizarea diverselor procese în mediul digital"
+          descriere_1="Cui Oferim?"
+          descriere_2="Ce Oferim?"
+        />
       </div>
     </div>
   );
 };
 
 const Produs_Componenta = (props) => {
-  const { nume, descriere, imagine } = props;
+  const { nume, descriere_1, descriere_2, imagine } = props;
   return (
     <>
       <div className="hidden md:block pt-1 bg-teal-500/40 rounded-full w-1/12"></div>
@@ -50,7 +68,8 @@ const Produs_Componenta = (props) => {
           ) : (
             <div className=" md:hidden w-44 h-44 p-1 mb-12 md:mb-4  mx-auto bg-black/10 rounded-md"></div>
           )}
-          <p className="text-center md:text-left">{descriere}</p>
+          <p className="text-center md:text-left">{descriere_1}</p>
+          <p className="text-center md:text-left mt-4">{descriere_2}</p>
         </div>
       </div>
     </>

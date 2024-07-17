@@ -1,9 +1,10 @@
+import Work from "../components/portfolio_page/work_section";
+import Projects from "../components/portfolio_page/projects_section";
 const Portfolio = () => {
   return (
-    <main>
-      <div className="min-h-screen flex items-center justify-center">
-        <h1 className="font-semibold">Portfolio page</h1>
-      </div>
+    <main className="py-24 md:py-0 bg-white px-8 md:px-32 2xl:px-64">
+      <Work />
+      <Projects />
     </main>
   );
 };
