@@ -3,8 +3,8 @@ import Link from "next/link";
 const Contact = () => {
   return (
     <main className="bg-white">
-      <div className="min-h-screen gap-8 md:gap-16 flex flex-col w-3/4 mx-auto justify-center">
-        <h1 className="text-center  text-3xl md:text-4xl mb-12 md:mb-0 slide-in font-semibold">
+      <div className="min-h-screen gap-16 flex flex-col w-3/4 mx-auto justify-center">
+        <h1 className="text-center  text-3xl md:text-4xl  slide-in font-semibold">
           Suntem Partenerul de care aveți nevoie pentru <br /> Succesul Afacerii
         </h1>
         <p className="text-center slide-in md:w-9/12 mx-auto">
@@ -12,7 +12,7 @@ const Contact = () => {
           integrat care să optimizeze orice afacere, suntem aici pentru a vă
           susține la fiecare pas.
         </p>
-        <div className="md:w-3/12 mx-auto md:flex-row flex-col flex items-center justify-center gap-8">
+        <div className="md:w-3/12 w-full mx-auto md:flex-row flex-col flex items-center justify-center gap-2 md:gap-8">
           <Link
             href="/"
             className="w-full slide-left px-6 py-2 bg-teal-500 text-white  flex items-center justify-center md:justify-start  hover:rounded-2xl   rounded-md transition-all"
