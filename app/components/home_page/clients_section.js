@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Clients = () => {
   return (
-    <div className="py-44 md:py-24 w-full flex flex-col gap-16 ">
+    <div className="py-16 md:py-24 w-full flex flex-col gap-16 ">
       <h1 className="text-4xl  w-full  font-semibold slide-left">
         Cum ne ajutăm clienții ?
       </h1>
@@ -21,7 +21,7 @@ const Clients = () => {
                 width={300}
                 height={400}
                 src="/clepsidra_icon.svg"
-                className="w-full md:w-10/12"
+                className="hidden md:block w-full md:w-10/12"
               />
             </div>
           </div>
@@ -43,7 +43,7 @@ const Clients = () => {
                 width={140}
                 height={210}
                 src="/quality_icon.svg"
-                className=" w-full md:w-10/12"
+                className=" hidden md:block w-full md:w-10/12"
               />
             </div>
           </div>

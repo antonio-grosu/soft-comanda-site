@@ -9,7 +9,7 @@ const Projects = () => {
   return (
     <div className="py-12 md:py-24">
       <h1 className="text-4xl  w-full  font-semibold slide-left">
-        Proiectele Noastre de Excepție{" "}
+        Proiectele Noastre de Excepție  {" "}
       </h1>
       <div className="snap-mandatory snap-y">
         <Project />

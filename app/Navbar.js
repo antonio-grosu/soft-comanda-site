@@ -16,18 +16,18 @@ const Navbar = () => {
     <>
       <nav className="fixed z-10 top-0 w-full px-8 py-4 shadow-sm bg-gray-50 flex items-center justify-between">
         <Link href="/" className="font-semibold">
-          software company
+          logo
         </Link>
         <div className="hidden  md:flex items-center justify-between text-sm gap-4 ">
           <Link href="/products" className="hover:text-teal-500 transition-all">
             Produse
           </Link>
-          <Link
+          {/* <Link
             href="/portfolio"
             className="hover:text-teal-500 transition-all"
           >
             Portofoliu
-          </Link>
+          </Link> */}
           <Link
             href="/contact"
             className="px-4 py-2 border-2 border-teal-300 hover:border-teal-400  flex items-center justify-start  hover:rounded-2xl bg-teal-500/10 hover:bg-teal-500/10 rounded-md transition-all"
@@ -60,7 +60,7 @@ const Navbar = () => {
         >
           <div className="w-2/3 gap-12 bg-teal-500 flex slide-right flex-col p-4">
             <div className="slide-in flex items-center justify-between w-full">
-              <h3 className="font-semibold text-white">software company</h3>
+              <h3 className="font-semibold text-white">Blooming Solutions</h3>
             </div>
             <div className="slide-in flex flex-col items-left">
               <h3 className=" text-white font-semibold">Pagini</h3>
@@ -70,7 +70,7 @@ const Navbar = () => {
                   Acasă
                 </Link>
                 <Link href="/products">Produse</Link>
-                <Link href="/portfolio">Portfolio</Link>
+                {/* <Link href="/portfolio">Portfoliu</Link> */}
               </div>
             </div>
             <div className="slide-in flex flex-col items-left">
@@ -81,7 +81,6 @@ const Navbar = () => {
                   Linkedin
                 </Link>
                 <Link href="/products">Twitter</Link>
-                <Link href="/portfolio">Instagram</Link>
               </div>
             </div>
             <div className="slide-in flex flex-col items-left">

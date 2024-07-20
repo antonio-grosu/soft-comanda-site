@@ -17,9 +17,6 @@ const Footer = () => {
         <Link href="/" className="text-sm hover:text-teal-500 transition-all ">
           Twitter
         </Link>
-        <Link href="/" className="text-sm hover:text-teal-500 transition-all ">
-          Instagram
-        </Link>
       </div>
       {/* <div className="flex flex-col md:mt-0 mt-8 md:items-center  gap-2">
         <h3 className="font-semibold">Proiectele noastre</h3>

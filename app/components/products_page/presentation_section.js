@@ -31,16 +31,16 @@ const Presentation = () => {
       </div>
       {/* pentru mobile  */}
       <div className="md:hidden grid grid-cols-2 gap-12 w-full items-center justify-center">
-        <div className="flex flex-col items-center slide-in justify-center w-44 h-44  mt-12 rounded-full bg-teal-500 p-1 border-teal-600 border-2 hover:border-teal-300 hover:shadow-teal-300 transition-all hover:scale-105">
+        <div className="flex flex-col items-center slide-in justify-center w-36 h-36  mt-12 rounded-full bg-teal-500 p-1 border-teal-600 border-2 hover:border-teal-300 hover:shadow-teal-300 transition-all hover:scale-105">
           <h3 className="text-white font-semibold">Expertiza</h3>
         </div>
-        <div className=" flex flex-col items-center slide-in justify-center w-44 h-44  rounded-full bg-black p-1 border-teal-900 border-2 hover:border-teal-300 hover:shadow-teal-300 transition-all hover:scale-105">
+        <div className=" flex flex-col items-center slide-in justify-center w-36 h-36  rounded-full bg-black p-1 border-teal-900 border-2 hover:border-teal-300 hover:shadow-teal-300 transition-all hover:scale-105">
           <h3 className="text-white font-semibold">Expertiza</h3>
         </div>
-        <div className=" flex flex-col items-center slide-in justify-center w-44 h-44  rounded-full bg-black p-1 border-teal-900 border-2 hover:border-teal-300 hover:shadow-teal-300 transition-all hover:scale-105">
+        <div className=" flex flex-col items-center slide-in justify-center w-36 h-36  rounded-full bg-black p-1 border-teal-900 border-2 hover:border-teal-300 hover:shadow-teal-300 transition-all hover:scale-105">
           <h3 className="text-white font-semibold">Expertiza</h3>
         </div>
-        <div className=" flex flex-col items-center slide-in justify-center w-44 h-44 -mt-12  rounded-full bg-teal-500 p-1 border-teal-600 border-2 hover:border-teal-300 hover:shadow-teal-300 transition-all hover:scale-105">
+        <div className=" flex flex-col items-center slide-in justify-center w-36 h-36 -mt-12  rounded-full bg-teal-500 p-1 border-teal-600 border-2 hover:border-teal-300 hover:shadow-teal-300 transition-all hover:scale-105">
           <h3 className="text-white font-semibold">Expertiza</h3>
         </div>
       </div>

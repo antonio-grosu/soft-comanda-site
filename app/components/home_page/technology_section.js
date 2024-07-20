@@ -4,7 +4,7 @@
 
 const Technology = () => {
   return (
-    <div className="flex md:flex-row md:items-center md:justify-between flex-col  md:gap-0 gap-8 min-h-screen">
+    <div className="flex md:flex-row md:items-center md:justify-between flex-col  md:gap-0 gap-8 md:min-h-screen">
       <div className="w-5/12 flex flex-col gap-4">
         <h1 className="text-4xl font-semibold slide-left">
           Specialitatea noastră, Tehnologia

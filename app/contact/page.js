@@ -3,23 +3,23 @@ import Link from "next/link";
 const Contact = () => {
   return (
     <main className="bg-white">
-      <div className="min-h-screen gap-16 flex flex-col w-3/4 mx-auto justify-center">
-        <h1 className="text-center  text-4xl mb-12 md:mb-0 slide-in font-semibold">
+      <div className="min-h-screen gap-8 md:gap-16 flex flex-col w-3/4 mx-auto justify-center">
+        <h1 className="text-center  text-3xl md:text-4xl mb-12 md:mb-0 slide-in font-semibold">
           Suntem Partenerul de care aveți nevoie pentru <br /> Succesul Afacerii
         </h1>
-        <p className="text-center slide-in w-9/12 mx-auto">
+        <p className="text-center slide-in md:w-9/12 mx-auto">
           Fie că visați la o aplicație inovatoare sau aveți nevoie de un sistem
           integrat care să optimizeze orice afacere, suntem aici pentru a vă
           susține la fiecare pas.
         </p>
-        <div className="flex items-center justify-center gap-8">
+        <div className="md:w-3/12 mx-auto md:flex-row flex-col flex items-center justify-center gap-8">
           <Link
             href="/"
-            className="slide-left px-6 py-2 bg-teal-500 text-white  flex items-center justify-start  hover:rounded-2xl   rounded-md transition-all"
+            className="w-full slide-left px-6 py-2 bg-teal-500 text-white  flex items-center justify-center md:justify-start  hover:rounded-2xl   rounded-md transition-all"
           >
             {" "}
             <svg
-              className="w-5 h-5 text-white mr-1"
+              className="w-5 h-5 text-white mr-2 md:mr-1"
               aria-hidden="true"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -33,7 +33,7 @@ const Contact = () => {
           </Link>
           <Link
             href="/"
-            className="slide-right px-6 py-2 bg-black/80 text-white  flex items-center justify-start  hover:rounded-2xl   rounded-md transition-all"
+            className="slide-right px-6 py-2 w-full bg-black/80 text-white  flex items-center justify-center md:justify-start  hover:rounded-2xl   rounded-md transition-all"
           >
             <svg
               className="w-6 h-6 text-white mr-1"
