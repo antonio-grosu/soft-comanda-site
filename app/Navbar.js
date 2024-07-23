@@ -73,7 +73,7 @@ const Navbar = () => {
                 {/* <Link href="/portfolio">Portfoliu</Link> */}
               </div>
             </div>
-            <div className="slide-in flex flex-col items-left">
+            {/* <div className="slide-in flex flex-col items-left">
               <h3 className=" text-white font-semibold">Rețele Sociale</h3>
               <div className="pt-1 w-full bg-white/10 mt-1"></div>
               <div className="flex flex-col gap-4 text-white text-sm">
@@ -82,13 +82,16 @@ const Navbar = () => {
                 </Link>
                 <Link href="/products">Twitter</Link>
               </div>
-            </div>
+            </div> */}
             <div className="slide-in flex flex-col items-left">
               <h3 className=" text-white font-semibold">Colaborări</h3>
               <div className="pt-1 w-full bg-white/10 mt-1"></div>
               <div className="flex flex-col gap-4 text-white text-sm">
-                <Link href="/" className="mt-4">
-                  contact@softwarecompany.com
+                <Link
+                  href="mailto:example@example.com?subject=Colaborare&body=Buna%20ziua,%20"
+                  className="mt-4"
+                >
+                  contact@blooming-solutions.ro
                 </Link>
                 <Link
                   href="/contact"
