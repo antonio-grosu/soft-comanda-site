@@ -5,12 +5,15 @@ import Footer from "./Footer";
 
 export const metadata = {
   title: "Blooming Solutions",
-  description: "Software la comandă pentru afaceri cu viziuni mărețe",
+  description: "Software la comandă pentru afaceri cu Viziuni Mărețe.",
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.png" />{" "}
+      </head>
       <body className="poppins bg-teal-500">
         <Navbar />
         <div>{children}</div>

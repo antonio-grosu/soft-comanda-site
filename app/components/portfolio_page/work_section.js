@@ -4,7 +4,7 @@ import Image from "next/image";
 const Work = () => {
   return (
     <div className="w-full min-h-screen flex flex-col md:gap-16 gap-8 justify-center">
-      <h1 className="text-4xl  md:mb-0 md:text-center font-semibold slide-in">
+      <h1 className="text-4xl  md:text-center font-semibold slide-in">
         Munca Noastră: Entuziasm, Profesionalism și Inovație
       </h1>
       <div className="md:w-7/12 grid md:grid-cols-4 grid-cols-2 gap-8 mx-auto">

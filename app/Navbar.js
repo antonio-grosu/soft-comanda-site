@@ -16,7 +16,7 @@ const Navbar = () => {
     <>
       <nav className="fixed z-10 top-0 w-full px-8 py-4 shadow-sm bg-gray-50 flex items-center justify-between">
         <Link href="/" className="font-semibold">
-          logo
+          Blooming Solutions
         </Link>
         <div className="hidden  md:flex items-center justify-between text-sm gap-4 ">
           <Link href="/products" className="hover:text-teal-500 transition-all">

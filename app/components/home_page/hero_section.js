@@ -10,7 +10,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="flex md:flex-row flex-col items-center gap-24 md:justify-between min-h-screen">
+    <div className="flex md:flex-row w-full flex-col items-center gap-24 md:justify-between min-h-screen">
       {/* div cu heading si cta */}
       <div className="flex flex-col gap-16 md:w-1/2">
         <div className="flex flex-col gap-8">
@@ -104,13 +104,13 @@ const Hero = () => {
             </div>
             <div className="w-full  p-2 bg-teal-500  rounded-md slide-right">
               <p className="text-white text-center w-full  text-xs font-semibold">
-                Nicio grijă
+                Nicio grijă Tehnică
               </p>
               <Image
                 width={80}
                 height={50}
                 src="tech_icon.svg"
-                className="w-10/12 mx-auto mt-2 slide-in"
+                className="w-11/12 mx-auto mt-2 slide-in"
               />
             </div>
           </div>

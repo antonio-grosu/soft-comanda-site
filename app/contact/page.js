@@ -14,7 +14,7 @@ const Contact = () => {
         </p>
         <div className="md:w-3/12 w-full mx-auto md:flex-row flex-col flex items-center justify-center gap-2 md:gap-8">
           <Link
-            href="/"
+            href="tel:40747738250"
             className="w-full slide-left px-6 py-2 bg-teal-500 text-white  flex items-center justify-center md:justify-start  hover:rounded-2xl   rounded-md transition-all"
           >
             {" "}
@@ -32,7 +32,7 @@ const Contact = () => {
             Sună
           </Link>
           <Link
-            href="/"
+            href="mailto:example@example.com?subject=Colaborare&body=Buna%20ziua,%20"
             className="slide-right px-6 py-2 w-full bg-black/80 text-white  flex items-center justify-center md:justify-start  hover:rounded-2xl   rounded-md transition-all"
           >
             <svg
