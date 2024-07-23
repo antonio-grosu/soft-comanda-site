@@ -13,6 +13,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.png" />{" "}
+        <meta
+          name="google-site-verification"
+          content="FTOloQJxI3cwSYCKGFve73NAierhgaliGaesZUbxoOg"
+        />
       </head>
       <body className="poppins bg-teal-500">
         <Navbar />
