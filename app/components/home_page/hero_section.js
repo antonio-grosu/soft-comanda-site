@@ -40,7 +40,7 @@ const Hero = () => {
           <div className="pt-1 w-5/12 bg-gray-600/10 rounded-full"></div>
           <h5 className=" text-sm mt-4 font-semibold">Cele mai populare </h5>
           <div className="w-full md:flex mt-4 text-black/50 items-center justify-start gap-2">
-            <p className="text-xs">Business Websites</p>
+            <p className="text-xs">Business Website</p>
             <p className="text-xs">WebApp Development</p>
             <p className="text-xs">Business Mangament Software</p>
             <p className="text-xs">Content Mangament Software</p>
@@ -50,6 +50,7 @@ const Hero = () => {
 
       <div className="flex flex-col items-center gap-4">
         <Image
+          alt="Ilustratie Cod"
           src="/hero-illustration.svg"
           width={300}
           height={300}
@@ -61,6 +62,7 @@ const Hero = () => {
             <p className="text-white text-xs font-semibold">
               Mai mult timp pentru afacere
               <Image
+                alt="Ilustratie Timp"
                 src="time_icon.svg"
                 className=" slide-in mt-2"
                 width={480}
@@ -73,6 +75,7 @@ const Hero = () => {
               Nicio grijă legată de aspectele tehnice
             </p>
             <Image
+              alt="Ilustratie Aspecte Tehnice"
               width={80}
               height={50}
               src="tech_icon.svg"
@@ -85,6 +88,7 @@ const Hero = () => {
         {/* mobile view components */}
         <div className="md:hidden w-full flex  justify-between gap-4">
           <Image
+            alt="Ilustratie Cod"
             src="/hero-illustration.svg"
             width={300}
             height={300}
@@ -96,6 +100,7 @@ const Hero = () => {
                 Mai mult timp pentru afacere
               </p>
               <Image
+                alt="Ilustratie Timp"
                 src="time_icon.svg"
                 className="w-10/12 mx-auto *: slide-in mt-2"
                 width={480}
@@ -107,6 +112,7 @@ const Hero = () => {
                 Nicio grijă Tehnică
               </p>
               <Image
+                alt="Ilustratie Aspecte Tehnice"
                 width={80}
                 height={50}
                 src="tech_icon.svg"
@@ -138,7 +144,7 @@ const Hero = () => {
             <div className="pt-1 w-5/12 bg-gray-600/10 rounded-full"></div>
             <h5 className="mt-4 text-sm font-semibold">Cele mai populare </h5>
             <div className="w-full grid grid-cols-2  mt-4 text-black/50 items-center justify-start gap-4">
-              <p className="text-xs">Business Websites</p>
+              <p className="text-xs">Business Website</p>
               <p className="text-xs">WebApp Development</p>
               <p className="text-xs">Business Mangament Software</p>
               <p className="text-xs">Content Mangament Software</p>

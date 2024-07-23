@@ -33,7 +33,7 @@ const Footer = () => {
       <div className="flex flex-col md:mt-0 mt-8 md:items-center gap-2">
         <h3 className="font-semibold">Pentru colaborări</h3>
         <Link
-          href="mailto:example@example.com?subject=Colaborare&body=Buna%20ziua,%20"
+          href="mailto:contact@blooming-solutions.ro?subject=Colaborare&body=Buna%20ziua%20"
           className="text-sm hover:text-teal-500 transition-all "
         >
           contact@blooming-solutions.ro

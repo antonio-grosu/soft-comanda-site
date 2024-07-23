@@ -18,6 +18,7 @@ const Clients = () => {
             </h3>
             <div className="w-1/12">
               <Image
+                alt="Ilustratie Timp"
                 width={300}
                 height={400}
                 src="/clepsidra_icon.svg"
@@ -40,6 +41,7 @@ const Clients = () => {
             </h3>
             <div className="w-1/12">
               <Image
+                alt="Ilustratie Calitate"
                 width={140}
                 height={210}
                 src="/quality_icon.svg"

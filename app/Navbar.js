@@ -88,8 +88,8 @@ const Navbar = () => {
               <div className="pt-1 w-full bg-white/10 mt-1"></div>
               <div className="flex flex-col gap-4 text-white text-sm">
                 <Link
-                  href="mailto:example@example.com?subject=Colaborare&body=Buna%20ziua,%20"
-                  className="mt-4"
+                  href="mailto:contact@blooming-solutions.ro?subject=Colaborare&body=Buna%20ziua%20"
+                  className="mt-4 py-2"
                 >
                   contact@blooming-solutions.ro
                 </Link>

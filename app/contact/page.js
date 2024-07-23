@@ -32,7 +32,7 @@ const Contact = () => {
             Sună
           </Link>
           <Link
-            href="mailto:example@example.com?subject=Colaborare&body=Buna%20ziua,%20"
+            href="mailto:contact@blooming-solutions.ro?subject=Colaborare&body=Buna%20ziua%20"
             className="slide-right px-6 py-2 w-full bg-black/80 text-white  flex items-center justify-center md:justify-start  hover:rounded-2xl   rounded-md transition-all"
           >
             <svg
