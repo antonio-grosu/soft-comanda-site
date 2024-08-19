@@ -82,16 +82,16 @@ const Technology = () => {
       <div className="flex md:hidden flex-col gap-8">
         <p className=" mt-8">
           Compania noastră se specializează în crearea de site-uri și aplicații
-          personalizate folosind cele mai avansate tehnologii JavaScript. Cu o
-          echipă de dezvoltatori experimentați, oferim soluții inovatoare și
-          performante, adaptate nevoilor fiecărui client.
+          personalizate folosind cele mai avansate tehnologii. Cu o echipă de
+          dezvoltatori experimentați, oferim soluții inovatoare și performante,
+          adaptate nevoilor fiecărui client.
         </p>
         <p>
-          Utilizăm framework-uri JavaScript de ultimă generație pentru a
-          construi aplicații rapide, scalabile și ușor de întreținut. Investim
-          constant în formarea echipei și explorarea celor mai noi tendințe din
-          industrie, asigurând astfel rezultate care depășesc așteptările și
-          oferă un avantaj competitiv clienților noștri.
+          Utilizăm framework-uri de ultimă generație pentru a construi aplicații
+          rapide, scalabile și ușor de întreținut. Investim constant în formarea
+          echipei și explorarea celor mai noi tendințe din industrie, asigurând
+          astfel rezultate care depășesc așteptările și oferă un avantaj
+          competitiv clienților noștri.
         </p>
       </div>
     </div>
