@@ -10,6 +10,13 @@ const Footer = () => {
         </p>
       </div>
       {/* <div className="flex flex-col md:mt-0 mt-8 md:items-center gap-2">
+        <h3 className="font-semibold">Blogul Nostru</h3>
+        <Link href="/blog" className="text-sm hover:text-teal-500 transition-all ">
+        </Link>
+        <Link href="/blog" className="text-sm hover:text-teal-500 transition-all ">
+        </Link>
+      </div> */}
+      {/* <div className="flex flex-col md:mt-0 mt-8 md:items-center gap-2">
         <h3 className="font-semibold">Rețele Sociale</h3>
         <Link href="/" className="text-sm hover:text-teal-500 transition-all ">
           Linkedin

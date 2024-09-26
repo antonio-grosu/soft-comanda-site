@@ -21,30 +21,44 @@ const Hero = () => {
             Lasă-ne pe noi să ne ocupăm de tehnologie, ca tu să te concentrezi
             pe creșterea afacerii tale!
           </p>
-          <div className="md:block hidden">
+          {/* TrustBox widget - Review Collector > */}
+
+          {/* <!-- End TrustBox widget --> */}
+          <div className=" hidden md:flex items-center gap-2">
             <Link
               href="/products"
-              className="px-4 py-2 border-2  border-teal-300 hover:border-teal-400    hover:rounded-2xl bg-teal-500/10 hover:bg-teal-500/30 rounded-md transition-all"
+              className="px-12 py-2 border-2  border-teal-300 hover:border-teal-400    hover:rounded-2xl bg-teal-500/10 hover:bg-teal-500/30 rounded-md transition-all"
             >
               Produsele Noastre
             </Link>
-            {/* <Link
-              href="/portfolio"
-              className="px-4 py-2 border-2 ml-4 text-white  border-black hover:border-black    hover:rounded-2xl bg-black/80  rounded-md transition-all"
-            >
-              Portofoliu
-            </Link> */}
           </div>
         </div>
+
         <div className="md:block hidden">
           <div className="pt-1 w-5/12 bg-gray-600/10 rounded-full"></div>
           <h5 className=" text-sm mt-4 font-semibold">Cele mai populare </h5>
-          <div className="w-full md:flex mt-4 text-black/50 items-center justify-start gap-2">
+          <div className="w-full mb-12 md:flex mt-4 text-black/50 items-center justify-start gap-2">
             <p className="text-xs">Business Website</p>
             <p className="text-xs">WebApp Development</p>
             <p className="text-xs">Business Mangament Software</p>
             <p className="text-xs">Content Mangament Software</p>
           </div>
+
+          <Link
+            href="https://www.trustpilot.com/review/blooming-solutions.ro"
+            target="_blank"
+            rel="noopener"
+            className="px-12 pb-2 hover:bg-green-600/10 hover:pt-2 border-b-2   border-green-600 hover:border-green-700    hover:rounded-2xl   transition-all"
+          >
+            Review-uri Trustpilot{" "}
+            <Image
+              src="/trustpilot.svg"
+              priority
+              className="inline-block mb-1"
+              width={30}
+              height={30}
+            ></Image>
+          </Link>
         </div>
       </div>
 
@@ -135,6 +149,21 @@ const Hero = () => {
             >
               Portofoliu
             </Link> */}
+            <Link
+              href="https://www.trustpilot.com/review/blooming-solutions.ro"
+              target="_blank"
+              rel="noopener"
+              className="px-12 text-center mt-4 pb-2 hover:bg-green-600/10 hover:pt-2 border-b-2   border-green-600 hover:border-green-700    hover:rounded-2xl   transition-all"
+            >
+              Review-uri Trustpilot{" "}
+              <Image
+                src="/trustpilot.svg"
+                priority
+                className="inline-block mb-1"
+                width={30}
+                height={30}
+              ></Image>
+            </Link>
             <p className="text-sm mt-8">
               Lasă-ne pe noi să ne ocupăm de tehnologie, ca tu să te concentrezi
               pe creșterea afacerii tale!

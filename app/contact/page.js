@@ -5,17 +5,17 @@ const Contact = () => {
     <main className="bg-white">
       <div className="min-h-screen gap-16 flex flex-col w-3/4 mx-auto justify-center">
         <h1 className="text-center  text-3xl md:text-4xl  slide-in font-semibold">
-          Suntem Partenerul de care aveți nevoie pentru <br /> Succesul Afacerii
+          Suntem Partenerul de care ai nevoie pentru <br /> Succesul Afacerii
         </h1>
         <p className="text-center slide-in md:w-9/12 mx-auto">
-          Fie că visați la o aplicație inovatoare sau aveți nevoie de un sistem
-          integrat care să optimizeze orice afacere, suntem aici pentru a vă
+          Fie că visezi la o aplicație inovatoare sau ai nevoie de un sistem
+          integrat care să optimizeze orice afacere, suntem aici pentru a te
           susține la fiecare pas.
         </p>
         <div className="md:w-3/12 w-full mx-auto md:flex-row flex-col flex items-center justify-center gap-2 md:gap-8">
           <Link
             href="tel:40747738250"
-            className="w-full slide-left px-6 py-2 bg-teal-500 text-white  flex items-center justify-center md:justify-start  hover:rounded-2xl   rounded-md transition-all"
+            className="w-full slide-left px-12 py-2 bg-teal-500 text-white  flex items-center justify-center md:justify-start  hover:rounded-2xl   rounded-md transition-all"
           >
             {" "}
             <svg
@@ -33,7 +33,7 @@ const Contact = () => {
           </Link>
           <Link
             href="mailto:contact@blooming-solutions.ro?subject=Colaborare&body=Buna%20ziua%20"
-            className="slide-right px-6 py-2 w-full bg-black/80 text-white  flex items-center justify-center md:justify-start  hover:rounded-2xl   rounded-md transition-all"
+            className="slide-right px-12 py-2 w-full bg-black/80 text-white  flex items-center justify-center md:justify-start  hover:rounded-2xl   rounded-md transition-all"
           >
             <svg
               className="w-6 h-6 text-white mr-1"
