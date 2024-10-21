@@ -1,4 +1,17 @@
-import Link from "next/link";
+// app/contact/page.js
+import Chat from '../components/Chat';
+
+export default function ContactPage() {
+    return (
+        <div>
+            <h1>Contact Us</h1>
+            <p>Describe your business, and we’ll suggest a software solution tailored to you!</p>
+            <Chat />
+        </div>
+    );
+}
+
+{/**import Link from "next/link";
 
 const Contact = () => {
   return (
@@ -55,3 +68,4 @@ const Contact = () => {
 };
 
 export default Contact;
+*/}
