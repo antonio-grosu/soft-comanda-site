@@ -1,48 +1,72 @@
-import { NextResponse } from 'next/server';
+// ... your imports
 
-/**
- * Handles the POST request for the chat route.
- * @param {Request} req - The request object.
- * @returns {Response} - The response object.
- */
 export async function POST(req) {
     try {
-        // Get the client input from the request body
         const { clientInput } = await req.json();
-        console.log('Client Input:', clientInput); // Log the client input for debugging
+        console.log('Client Input:', clientInput);
 
-        // Fetch the GPT response from OpenAI API
         const gptResponse = await fetch('https://api.openai.com/v1/chat/completions', {
             method: 'POST',
             headers: {
-                'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`, // Use your OpenAI API key from environment variables
+                'Authorization': `Bearer ${process.env.OPENAI_API_KEY}`,
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-                model: 'gpt-3.5-turbo', // Use the GPT model you want to use
+                model: 'gpt-3.5-turbo',
                 messages: [
-                    { role: "system", content: "You are an assistant for Blooming Solutions." },
+                    {
+                        role: "system",
+                        content: `
+                        You are a Blooming Solutions assistant, helping clients choose the right software solutions based on their needs. 
+                        Below is a list of services, their price ranges, and guidelines for offering discounts on additional services.
+
+                        **Service List and Pricing:**
+                        1. **Static Websites**: $100 - $600. Simple, fast websites with few updates; pricing depends on the number of pages.
+                        2. **Blogs**: $300 - $1,000. Content-driven sites with CMS integration; higher-end options include design, SEO, and plugin setup.
+                        3. **Social Media Administration**: $20 - $250/month. Includes regular posting, engagement management, and audience growth strategies.
+                        4. **Custom Dynamic Websites**: $600 - $3,000+. Interactive sites needing custom features or frequent updates, with pricing based on complexity.
+                        5. **Web Platforms and Applications**: $2,000 - $15,000+. For membership platforms or e-commerce, requiring substantial backend and frontend work.
+                        6. **Desktop Applications**: $1,000 - $10,000+. Installable software for specific business needs; price varies based on OS compatibility and complexity.
+                        7. **Phone Applications**: $2,000 - $30,000+. Mobile apps for Android/iOS, ranging widely due to features, design, and support needs.
+                        8. **Security Systems Installation**: $400 - $4,000+. Physical security system installation; pricing includes equipment and setup and may vary by location.
+                        9. **ERP Solutions**: $5,000 - $50,000+. Centralized systems for managing company operations; price varies based on modules and customization.
+                        10. **RPA (Robotic Process Automation)**: $2,000 - $20,000+. Automates repetitive tasks; often requires consulting and customization.
+                        11. **Robotics and Automation**: $5,000 - $100,000+. Customized solutions for industries like manufacturing; pricing depends on equipment and project scope.
+
+                        **Discount Structure:**
+                        - If a client selects a **Web Platform, Application, ERP Solution, or RPA System**, smaller services (Static Websites, Blogs, Social Media Administration) are included at no additional cost.
+                        
+                        **Guidelines:**
+                        - Engage with clients to understand their business size, industry, and primary goals.
+                        - Recommend solutions based on their needs and budget, clearly explaining each option.
+                        - If the client selects a qualifying service, inform them about complimentary services as a value-add.
+                        - Guide the client to confirm their selections when ready.
+
+                        Your goal is to provide helpful, relevant recommendations and lead clients toward confirming their order.
+                        `
+                    },
                     { role: "user", content: clientInput }
                 ],
             }),
         });
 
-        // Check if the GPT response is not OK
         if (!gptResponse.ok) {
-            const errorDetails = await gptResponse.text(); // Get error details from the response
-            console.error('Error from GPT:', errorDetails); // Log the error details for debugging
-            throw new Error('Failed to fetch GPT response'); // Throw an error to be caught in the catch block
+            const errorDetails = await gptResponse.text();
+            console.error('Error from GPT:', errorDetails);
+            throw new Error('Failed to fetch GPT response');
         }
 
-        // Parse the GPT response
         const data = await gptResponse.json();
-        console.log('GPT Response:', data); // Log the full GPT response for debugging
+        console.log('GPT Response:', data);
 
-        // Return the AI response in JSON format
-        return NextResponse.json({ reply: data.choices[0].message.content });
+        return new Response(JSON.stringify({ reply: data.choices[0].message.content }), {
+            headers: { 'Content-Type': 'application/json' },
+        });
     } catch (error) {
-        // Log the error message and return an error response
-        console.error('Error in API:', error.message); // Log only the error message
-        return NextResponse.json({ error: 'Something went wrong with the AI response' }, { status: 500 });
+        console.error('Error in API:', error.message);
+        return new Response(JSON.stringify({ error: 'Something went wrong with the AI response' }), {
+            status: 500,
+            headers: { 'Content-Type': 'application/json' },
+        });
     }
 }
