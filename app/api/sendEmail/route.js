@@ -62,23 +62,19 @@ async function getClientSummary(clientDetails, recommendedServices) {
         ${clientDetails}
 
         **Service Description:**
-        ${aiResponse}
+        ${recommendedServices}
 
         **Total Estimated Cost:** $X,XXX
 
         **Estimated Timeline:** X weeks
 
         ---------------------------------------------------
-        Client Details: ${clientDetails}
-        Recommended Services: ${recommendedServices}
     `;
 
-    // Call AI helper function
-    const aiResponse = await getAISummary(clientPrompt).then((response) => {
-        return response;
-    });
+    // Call AI helper function and return the response
+    const aiResponse = await getAISummary(clientPrompt);
+    return aiResponse;
 }
-
 
 // Function to get team-specific technical AI summary
 async function getTeamSummary(clientDetails, recommendedServices) {

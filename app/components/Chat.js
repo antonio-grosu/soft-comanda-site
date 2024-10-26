@@ -24,7 +24,7 @@ export default function Chat() {
             const response = await fetch('/api/chat', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ clientInput: input }),
+                body: JSON.stringify({ clientInput: messages.map(msg => msg.content).join('\n') + '\n' + input }),
             });
 
             if (!response.ok) throw new Error('Failed to fetch the response from the AI');
@@ -80,8 +80,8 @@ export default function Chat() {
             <div className="flex flex-col w-full md:w-2/3 lg:w-1/2 h-full bg-white shadow-lg rounded-lg border border-gray-200">
                 {/* Header */}
                 <div className="p-5 bg-gray-800 text-white text-center rounded-t-lg">
-                    <h1 className="text-2xl font-bold">Contact Blooming Solutions AI</h1>
-                    <p className="text-sm mt-1">Tell us about your business, and we’ll suggest the best solutions for you!</p>
+                    <h1 className="text-2xl font-bold">Contactați Blooming Solutions AI</h1>
+                    <p className="text-sm mt-1">Spuneți-ne despre afacerea dumneavoastră și vă vom sugera cele mai bune soluții!</p>
                 </div>
 
                 {/* Chat Messages */}
@@ -117,7 +117,7 @@ export default function Chat() {
 
                 {/* Email Input and Confirm Button */}
                 {conversationEnded && (
-                    <div className="p-4 bg-gray-100 border-t border-gray-200 flex flex-col items-center space-y-3">
+                    <div className="p-4 bg-gray-100 border-t border-gray-200 flex flex-col items-center space-y-3 animate-popup">
                         <input
                             type="email"
                             value={clientEmail}
@@ -128,7 +128,7 @@ export default function Chat() {
                         <button
                             onClick={handleConfirm}
                             className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors">
-                            Confirm
+                            Confirma
                         </button>
                     </div>
                 )}
