@@ -1,13 +1,12 @@
 import nodemailer from 'nodemailer';
-import fetch from 'node-fetch'; // Ensure fetch is available in your environment
 
 export async function POST(req) {
     try {
         const { clientEmail, clientDetails, recommendedServices } = await req.json();
 
-        // Generate summaries from the AI for both the client and yourself
-        const aiClientSummary = await getAISummary(clientDetails, recommendedServices, 'client');
-        const aiTeamSummary = await getAISummary(clientDetails, recommendedServices, 'team');
+        // Generate individual summaries for the client and team
+        const aiClientSummary = await getClientSummary(clientDetails, recommendedServices);
+        const aiTeamSummary = await getTeamSummary(clientDetails, recommendedServices);
 
         // Configure nodemailer with Gmail transporter
         let transporter = nodemailer.createTransport({
@@ -47,19 +46,56 @@ export async function POST(req) {
     }
 }
 
-// Function to get AI summary based on the recipient type
-async function getAISummary(clientDetails, recommendedServices, recipientType) {
-    const prompt = `
-        You are an assistant that summarizes client inquiries for two different audiences.
-        - For the client, provide a friendly, non-technical overview of the recommended services, emphasizing how they will benefit their business.
-        - For the team member, provide a detailed, technical breakdown of the services being recommended.
+// Function to get client-friendly AI summary in an invoice-like format
+async function getClientSummary(clientDetails, recommendedServices) {
+    const clientPrompt = `
+        You are an assistant creating a summary for a client in the style of a Romanian factura (invoice).
+        Format the summary with sections including "Client Details," "Service Description," "Total Estimated Cost," and "Estimated Timeline."
+        Make sure to keep the language non-technical, focus on the business benefits, and present it in an easy-to-read structure.
+
+        At the end of the summary, include a friendly closing message to thank the client for considering Blooming Solutions and the invoice.
+        ---------------------------------------------------
+                         Invoice Summary
+        ---------------------------------------------------
+
+        **Client Details:**
+        ${clientDetails}
+
+        **Service Description:**
+        ${aiResponse}
+
+        **Total Estimated Cost:** $X,XXX
+
+        **Estimated Timeline:** X weeks
+
+        ---------------------------------------------------
+        Client Details: ${clientDetails}
+        Recommended Services: ${recommendedServices}
+    `;
+
+    // Call AI helper function
+    const aiResponse = await getAISummary(clientPrompt).then((response) => {
+        return response;
+    });
+}
+
+
+// Function to get team-specific technical AI summary
+async function getTeamSummary(clientDetails, recommendedServices) {
+    const teamPrompt = `
+        You are a technical assistant summarizing service recommendations for the internal team.
+        Please provide a detailed, technical breakdown of each recommended service, including specific
+        features, requirements, and considerations relevant to implementing these solutions.
 
         Client Details: ${clientDetails}
         Recommended Services: ${recommendedServices}
-        
-        Please provide a summary for the ${recipientType}:
     `;
 
+    return await getAISummary(teamPrompt);
+}
+
+// Helper function to send request to AI model
+async function getAISummary(prompt) {
     const gptResponse = await fetch('https://api.openai.com/v1/chat/completions', {
         method: 'POST',
         headers: {
@@ -69,7 +105,7 @@ async function getAISummary(clientDetails, recommendedServices, recipientType) {
         body: JSON.stringify({
             model: 'gpt-3.5-turbo',
             messages: [
-                { role: 'system', content: 'You are an assistant that generates summaries for clients and team members.' },
+                { role: 'system', content: 'You generate specific summaries for clients and internal teams based on given prompts.' },
                 { role: 'user', content: prompt }
             ],
         }),
