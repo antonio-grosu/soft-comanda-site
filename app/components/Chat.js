@@ -114,25 +114,25 @@ export default function Chat() {
                         Send
                     </button>
                 </div>
-
-                {/* Email Input and Confirm Button */}
-                {conversationEnded && (
-                    <div className="p-4 bg-gray-100 border-t border-gray-200 flex flex-col items-center space-y-3 animate-popup">
-                        <input
-                            type="email"
-                            value={clientEmail}
-                            onChange={(e) => setClientEmail(e.target.value)}
-                            placeholder="Enter your email address"
-                            className="w-full p-2 border rounded-lg border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
-                        />
-                        <button
-                            onClick={handleConfirm}
-                            className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors">
-                            Confirma
-                        </button>
-                    </div>
-                )}
             </div>
+            {/* Email Input and Confirm Button */}
+            {conversationEnded && (
+                <div className="p-4 bg-gray-100 border-t border-gray-200 flex flex-col items-center space-y-3 animate-popup">
+                    <p className="text-sm text-gray-600">Te rugăm să-ți introduci adresa de email pentru a confirma serviciile.</p>
+                    <input
+                        type="email"
+                        value={clientEmail}
+                        onChange={(e) => setClientEmail(e.target.value)}
+                        placeholder="Enter your email address"
+                        className="w-full p-2 border rounded-lg border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-green-500"
+                    />
+                    <button
+                        onClick={handleConfirm}
+                        className="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors">
+                        Confirma
+                    </button>
+                </div>
+            )}
         </div>
     );
 }

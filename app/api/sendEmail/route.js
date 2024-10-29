@@ -64,9 +64,11 @@ async function getClientSummary(clientDetails, recommendedServices) {
         **Service Description:**
         ${recommendedServices}
 
-        **Total Estimated Cost:** $X,XXX
+        **Total Estimated Cost:** $X,XXX (fill in with a realistic cost)
 
-        **Estimated Timeline:** X weeks
+        **Estimated Timeline:** X weeks (fill in with a realistic timeline)
+
+        If you have any questions or need further details, please don't hesitate to reach out at +40771070201, or +40747738250. We appreciate your consideration and look forward to working with you!
 
         ---------------------------------------------------
     `;
@@ -85,6 +87,36 @@ async function getTeamSummary(clientDetails, recommendedServices) {
 
         Client Details: ${clientDetails}
         Recommended Services: ${recommendedServices}
+
+        Please ensure the summary includes technical details, potential challenges, and any additional information that would be relevant for the team to know.
+
+        ---------------------------------------------------
+        Technical Summary for Internal Team 
+
+        **Service Recommendations:**
+        - Service 1: Details
+        - Service 2: Details
+        - Service 3: Details
+        , etc.
+
+        **Technical Considerations:**
+        - Consideration 1
+        - Consideration 2
+        - Consideration 3
+
+        **Legal and Compliance Requirements:**
+        - Requirement 1
+        - Requirement 2
+        - Requirement 3
+
+        **Implementation Challenges:**
+        - Challenge 1
+        - Challenge 2
+        - Challenge 3
+
+        **Email Client:** ${clientDetails}
+
+        ---------------------------------------------------
     `;
 
     return await getAISummary(teamPrompt);
