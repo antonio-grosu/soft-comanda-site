@@ -20,8 +20,8 @@ export async function POST(req) {
         // Send email to Blooming Solutions team with technical details
         await transporter.sendMail({
             from: process.env.EMAIL_USER,
-            to: 'damiantudorchristian@gmail.com',
-            subject: 'New Client Inquiry',
+            to: process.env.EMAIL_USER,
+            subject: `Client Summary for ${clientEmail}`,
             text: aiTeamSummary
         });
 
