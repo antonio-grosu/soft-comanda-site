@@ -100,12 +100,12 @@ export default function Chat() {
                 </div>
 
                 {/* Input Area */}
-                <div className="p-4 bg-white border-t border-gray-200 rounded-b-lg flex items-center space-x-4 lg:space-y-0">
+                <div className="p-4 bg-white border-t border-gray-200 rounded-b-lg flex items-center space-x-4 w-full">
                     <input
                         value={input}
                         onChange={(e) => setInput(e.target.value)}
                         placeholder="Type your message..."
-                        className="flex-1 p-2 border rounded-lg border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 w-3/5 md:w-4/5 w-fit"
+                        className="flex-1 p-2 border rounded-lg border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 w-3/5 max-w-md"
                     />
                     <button
                         onClick={handleSend}
@@ -117,21 +117,21 @@ export default function Chat() {
 
             {/* Email Input and Confirm Button */}
             {conversationEnded && (
-                <div className="p-4 bg-gray-50 border-t border-gray-200 flex flex-col items-center space-y-3 w-full md:w-2/3 lg:w-1/2">
-                    <p className='text-sm text-gray-600'>Introdu-ți adresa de email pentru a confirma serviciile.</p>
-                    <div className="flex items-center space-x-4 w-4/5">
+                <div className="p-4 bg-gray-50 border-t border-gray-200 flex flex-col items-center space-y-3 w-full max-w-md md:w-2/3 lg:w-1/2 mx-auto">
+                    <p className='text-sm text-gray-600 text-center'>Introdu-ți adresa de email pentru a confirma serviciile.</p>
+                    <div className="flex flex-col sm:flex-row items-center justify-center space-y-3 sm:space-y-0 sm:space-x-4 w-full">
                         <input
                             type="email"
                             value={clientEmail}
                             onChange={(e) => setClientEmail(e.target.value)}
                             placeholder="Adresa de email"
-                            className="w-full p-2 border rounded-lg border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 border-teal-500 bg-teal-500/20"
+                            className="p-2 border rounded-lg border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 border-teal-500 bg-teal-500/20 w-full sm:w-3/5"
                         />
                         <button
                             onClick={handleConfirm}
-                            disabled={loading} // Disable button while loading
+                            disabled={loading}
                             className={`px-4 py-2 rounded-lg transition-colors ${loading ? 'bg-teal-400 cursor-not-allowed' : 'bg-teal-500 hover:bg-teal-600'
-                                } text-white flex items-center space-x-2`}>
+                                } text-white flex items-center w-full sm:w-auto justify-center`}>
                             {loading ? (
                                 <svg
                                     className="w-5 h-5 text-white animate-spin"
