@@ -78,7 +78,7 @@ export default function Chat() {
     };
 
     return (
-        <div className="flex flex-col items-center gap-4 mt-10 p-6 bg-gray-50 min-h-screen w-full">
+        <div className="flex flex-col items-center gap-4 mt-10 lg:p-6 bg-gray-50 min-h-screen w-full">
             <div className="flex flex-col w-full md:w-2/3 lg:w-1/2 h-full bg-white shadow-md rounded-lg mt-5">
                 {/* Header */}
                 <div className="p-5 bg-teal-500/20 text-black text-center rounded-t-lg border border-teal-500">
