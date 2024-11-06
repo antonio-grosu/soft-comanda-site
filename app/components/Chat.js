@@ -78,7 +78,7 @@ export default function Chat() {
     };
 
     return (
-        <div className="flex flex-col items-center gap-4 mt-10 lg:p-6 bg-gray-50 min-h-screen w-full">
+        <div className="flex flex-col items-center gap-4 mt-10 md:p-6 bg-gray-50 min-h-screen w-full">
             <div className="flex flex-col w-full md:w-2/3 lg:w-1/2 h-full bg-white shadow-md rounded-lg mt-5">
                 {/* Header */}
                 <div className="p-5 bg-teal-500/20 text-black text-center rounded-t-lg border border-teal-500">
@@ -100,12 +100,12 @@ export default function Chat() {
                 </div>
 
                 {/* Input Area for Desktop */}
-                <div className="p-4 bg-white border-t border-gray-200 rounded-b-lg flex items-center space-x-4 w-full hidden md:flex">
+                <div className="p-4 bg-white border-t border-gray-200 rounded-b-lg flex items-center justify-between space-x-4 w-full hidden md:flex">
                     <input
                         value={input}
                         onChange={(e) => setInput(e.target.value)}
                         placeholder="Type your message..."
-                        className="flex-1 p-2 border rounded-lg border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 w-3/5 max-w-md"
+                        className="flex-1 p-2 border rounded-lg border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500 w-fit"
                     />
                     <button
                         onClick={handleSend}
@@ -115,12 +115,12 @@ export default function Chat() {
                 </div>
                 {/* Input Area for Mobile */}
                 <div className="p-4 bg-white border-t border-gray-200 flex items-center w-full md:hidden">
-                    <div className="flex items-center w-full max-w-md bg-gray-100 rounded-full px-3 py-1 border border-gray-300 shadow-sm focus-within:ring-2 focus-within:ring-teal-500">
+                    <div className="flex items-center w-full max-w-fit bg-gray-100 rounded-full px-3 py-1 border border-gray-300 shadow-sm focus-within:ring-2 focus-within:ring-teal-500">
                         <input
                             value={input}
                             onChange={(e) => setInput(e.target.value)}
                             placeholder="Type a message..."
-                            className="flex-1 bg-transparent outline-none px-2 py-1 text-sm w-full max-w-md"
+                            className="flex-1 bg-transparent outline-none px-2 py-1 text-sm w-fit"
                         />
                         <button
                             onClick={handleSend}
