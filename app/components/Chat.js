@@ -100,7 +100,7 @@ export default function Chat() {
                 </div>
 
                 {/* Input Area */}
-                <div className="p-4 bg-white border-t border-gray-200 rounded-b-lg flex items-center space-x-4 w-full">
+                <div className="p-4 bg-white border-t border-gray-200 rounded-b-lg flex items-center space-x-4 w-full hidden md:flex">
                     <input
                         value={input}
                         onChange={(e) => setInput(e.target.value)}
@@ -113,6 +113,30 @@ export default function Chat() {
                         Trimite
                     </button>
                 </div>
+                {/* Input Area */}
+                <div className="p-4 bg-white border-t border-gray-200 flex items-center w-full md:hidden">
+                    <div className="flex items-center w-full max-w-md bg-gray-100 rounded-full px-3 py-1 border border-gray-300 shadow-sm focus-within:ring-2 focus-within:ring-teal-500">
+                        <input
+                            value={input}
+                            onChange={(e) => setInput(e.target.value)}
+                            placeholder="Type a message..."
+                            className="flex-1 bg-transparent outline-none px-2 py-1 text-sm w-full max-w-md"
+                        />
+                        <button
+                            onClick={handleSend}
+                            className="bg-teal-500 text-white p-2 rounded-full hover:bg-teal-600 transition-colors flex items-center justify-center ml-2">
+                            <svg
+                                className="w-5 h-5"
+                                fill="currentColor"
+                                viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path d="M2.3 12.9l16.9-7.2c1.2-.5 2.5.5 2.2 1.8l-1.5 5.6c-.2.8-1 .9-1.6.3l-6-4.9-4.2 6.8c-.4.7-1.5.8-2.1.1l-2.9-3.7c-.5-.7-.2-1.7.6-1.8z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
             </div>
 
             {/* Email Input and Confirm Button */}
