@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    env: {
+        OPENAI_API_KEY: process.env.OPENAI_API_KEY, // Expose the OPENAI_API_KEY variable
+    },
+};
 
 export default nextConfig;
