@@ -99,7 +99,7 @@ export default function Chat() {
                     <div ref={messagesEndRef} />
                 </div>
 
-                {/* Input Area */}
+                {/* Input Area for Desktop */}
                 <div className="p-4 bg-white border-t border-gray-200 rounded-b-lg flex items-center space-x-4 w-full hidden md:flex">
                     <input
                         value={input}
@@ -113,7 +113,7 @@ export default function Chat() {
                         Trimite
                     </button>
                 </div>
-                {/* Input Area */}
+                {/* Input Area for Mobile */}
                 <div className="p-4 bg-white border-t border-gray-200 flex items-center w-full md:hidden">
                     <div className="flex items-center w-full max-w-md bg-gray-100 rounded-full px-3 py-1 border border-gray-300 shadow-sm focus-within:ring-2 focus-within:ring-teal-500">
                         <input
