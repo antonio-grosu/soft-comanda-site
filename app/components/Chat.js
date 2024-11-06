@@ -2,7 +2,7 @@
 import { useState, useRef, useEffect } from 'react';
 
 export default function Chat() {
-    const [messages, setMessages] = useState([]);
+    const [messages, setMessages] = useState([{ role: 'assistant', content: 'Salut! Cum te pot ajuta?' }]);
     const [input, setInput] = useState('');
     const [clientEmail, setClientEmail] = useState('');
     const [conversationEnded, setConversationEnded] = useState(false);
